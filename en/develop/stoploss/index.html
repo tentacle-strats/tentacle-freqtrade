@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2449,8 +2449,14 @@ The Order-type will be ignored if only one mode is available.</p>
 </details>
 <div class="admonition note">
 <p class="admonition-title">Tight stoploss</p>
-<p><ins>Do not set too low/tight stoploss value when using stop loss on exchange!</ins><br />
+<p>Do not set too low/tight stoploss value when using stop loss on exchange!<br />
 If set to low/tight you will have greater risk of missing fill on the order and stoploss will not work.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Loose stoploss</p>
+<p>Using stoploss on exchange with a very wide stoploss (e.g. -1) may fail to place the stoploss order on exchange due to exchange limitations.
+In that case, the bot will fallback to using the <code>emergency_exit</code> order type to place a market order as placing the stoploss order failed.
+Freqtrade currently does not implement a limitation to avoid this situation, so please ensure your stoploss values are within reasonable limits for your exchange or disable stoploss on exchange.</p>
 </div>
 <h3 id="stoploss_on_exchange-and-stoploss_on_exchange_limit_ratio">stoploss_on_exchange and stoploss_on_exchange_limit_ratio<a class="headerlink" href="#stoploss_on_exchange-and-stoploss_on_exchange_limit_ratio" title="Permanent link">&para;</a></h3>
 <p>Enable or Disable stop loss on exchange.
@@ -2721,10 +2727,10 @@ If price moves 1% - you've lost 10$ of your own capital - therefore stoploss wil
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "search.share", "content.code.copy", "content.action.edit", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "search.share", "content.code.copy", "content.action.edit", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       
