@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -334,53 +334,6 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Installation
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
       <a href="../installation/" class="md-nav__link">
         
@@ -389,7 +342,7 @@
   <span class="md-ellipsis">
     
   
-    Linux/MacOS/Raspberry
+    Installation
   
 
     
@@ -398,42 +351,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows_installation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Windows
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3463,7 +3380,7 @@ Your original strategy will remain available in the <code>user_data/strategies_o
 <div class="admonition warning">
 <p class="admonition-title">Conversion results</p>
 <p>Strategy updater will work on a "best effort" approach. Please do your due diligence and verify the results of the conversion.
-We also recommend to run a python formatter (e.g. <code>black</code>) to format results in a sane manner.</p>
+We also recommend to run a python formatter (e.g. <code>ruff format</code>) to format results in a sane manner.</p>
 </div>
 <div class="highlight"><pre><span></span><code><span class="go">usage: freqtrade strategy-updater [-h] [-v] [--no-color] [--logfile FILE] [-V]</span>
 <span class="go">                                  [-c PATH] [-d PATH] [--userdir PATH]</span>
@@ -3476,10 +3393,7 @@ We also recommend to run a python formatter (e.g. <code>black</code>) to format 
 <span class="go">  --strategy-list STRATEGY_LIST [STRATEGY_LIST ...]</span>
 <span class="go">                        Provide a space-separated list of strategies to</span>
 <span class="go">                        backtest. Please note that timeframe needs to be set</span>
-<span class="go">                        either in config or via command line. When using this</span>
-<span class="go">                        together with `--export trades`, the strategy-name is</span>
-<span class="go">                        injected into the filename (so `backtest-data.json`</span>
-<span class="go">                        becomes `backtest-data-SampleStrategy.json`</span>
+<span class="go">                        either in config or via command line.</span>
 <span class="go">  --strategy-path PATH  Specify additional strategy lookup path.</span>
 <span class="go">  --recursive-strategy-search</span>
 <span class="go">                        Recursively search for a strategy in the strategies</span>
